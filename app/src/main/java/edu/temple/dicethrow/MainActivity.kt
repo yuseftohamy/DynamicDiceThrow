@@ -24,13 +24,15 @@ class MainActivity : AppCompatActivity(), ButtonFragment.ButtonInterface {
         setContentView(R.layout.activity_main)
 
         /* TODO 1: Load fragment(s)
-            - Show only Button Fragment if portrait
-            - show both fragments if Landscape
+            - Show _only_ ButtonFragment if portrait
+            - show _both_ fragments if Landscape
           */
     }
 
-    /* TODO 2: switch fragments if portrait (no need to switch fragments if Landscape)
+    /* TODO 2: switch fragments if die rolled and in portrait (no need to switch fragments if Landscape)
         */
+
+    // This callback function gets invoked when the child Fragment invokes it
     // Remember to place Fragment transactions on BackStack so then can be reversed
     override fun buttonClicked() {
 

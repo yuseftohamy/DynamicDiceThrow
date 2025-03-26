@@ -25,12 +25,18 @@ class ButtonFragment : Fragment() {
                 // Generate a random die roll
                 dieViewModel.rollDie()
 
-                // Notify activity
+                // Notify activity via interface that it implements
                 (requireActivity() as ButtonInterface).buttonClicked()
             }
         }
     }
 
+    /**
+     * Interface to be realized by parent activity
+     * to allow communication without ViewModel
+     * This allows an event occurrence to be propagated even
+     * with no associated state change
+     */
     interface ButtonInterface {
         fun buttonClicked()
     }
